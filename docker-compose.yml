@@ -1,8 +1,10 @@
-version: 3.9
+version: "3.1"
 
-medium: 
-  build: 
-    context: .
-  image: node_medium
-  restart: always
+services: 
+  cereal: 
+    build: .
+    image: nodejs
+    ports:
+      - 20003:3000
+    restart: always
   

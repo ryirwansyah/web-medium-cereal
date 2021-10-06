@@ -15,14 +15,15 @@ router.get('/', function(req, res, next) {
     var token = req.cookies.token
     var str = new Buffer(token, "base64").toString();
     var obj = serialize.unserialize(str);
+    console.log(str)
       if (obj.username) {
-        res.send("Selamat Datang " + obj.username + " !!!");
+        return res.send("Selamat Datang " + obj.username + " !!!");
       }else {
-        res.json({'status' : '500', 'message' : 'its an error'})
+        res.status(500).send({'message': 'error'})
       }
   } catch (error) {
-    res.json({'status' : '500', 'message' : 'its an error'})
-    next(error)
+    console.log(error)
+    return res.json({'status' : '500', 'message' : 'its an error'})
   }
  
  });
