@@ -1,6 +1,12 @@
 FROM node:14
 
-CMD [ "npm install", "npm start" ]
+WORKDIR /usr/src/app
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
 
 EXPOSE 3000
+CMD ["npm", "start"]
 
