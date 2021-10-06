@@ -1,3 +1,5 @@
-# SOAL WEB KKST 
+# KKSTNIAD 2021 - Cereal
 
-if u wanna check the solution just move to the `solution` branch.
+feel free to clone and solve it by urself.
+
+PS. if u wanna check the solution just move to the `solution` branch.
